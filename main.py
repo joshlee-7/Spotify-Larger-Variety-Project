@@ -5,6 +5,7 @@ import pandas as pd
 import numpy as np
 from sklearn.neighbors import NearestNeighbors
 
+# Make into class
 # ranges: lower and upper bounds (list of 2 numbers)
 # dataset: string containing path to file containing data
 # songlist: array of strings of song id's
