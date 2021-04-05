@@ -53,8 +53,7 @@ def better_recs(ranges, dataset, songlist):
     curr.loc[:, "year"] -= 1920
     curr.loc[:, "year"] /= 101
     curr = curr.loc[:,
-           ["acousticness", "danceability", "energy", "instrumentalness",
-            "liveness", "loudness", "popularity",
+           ["acousticness", "danceability", "energy", "instrumentalness","liveness", "loudness", "popularity",
             "speechiness", "tempo", "year", "id"]]
 
     currlist = np.array(curr.values.tolist())
