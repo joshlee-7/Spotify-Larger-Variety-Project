@@ -53,7 +53,8 @@ def better_recs(ranges, dataset, songlist):
     curr.loc[:, "year"] -= 1920
     curr.loc[:, "year"] /= 101
     curr = curr.loc[:,
-           ["acousticness", "danceability", "energy", "instrumentalness", "liveness", "loudness", "popularity",
+           ["acousticness", "danceability", "energy", "instrumentalness",
+            "liveness", "loudness", "popularity",
             "speechiness", "tempo", "year", "id"]]
 
     currlist = np.array(curr.values.tolist())
@@ -72,7 +73,8 @@ def better_recs(ranges, dataset, songlist):
     curr.to_csv("modified.csv")
     return recommended_songs
 
-# This function takes the list of songs and turns it into a playlist and adds it to the user's Spotify account.
+# This function takes the list of songs and turns it into a playlist
+# and adds it to the user's Spotify account.
 def make_playlist(list_id,playlist_name):
     sp = security()
     # sp = spotipy.Spotify(auth=token)
